@@ -3,7 +3,6 @@ import { Navbar } from './components/Navbar';
 import { Hero } from './components/Hero';
 import { ServicesSection } from './components/ServicesSection';
 import { PortfolioGallery } from './components/PortfolioGallery';
-import { QuoteEstimator } from './components/QuoteEstimator';
 import { MaterialsAndProcess } from './components/MaterialsAndProcess';
 import { TestimonialsAndFaq } from './components/TestimonialsAndFaq';
 import { ContactSection } from './components/ContactSection';
@@ -53,9 +52,6 @@ export default function App() {
 
         {/* Materials Science & 5-Step Workflow */}
         <MaterialsAndProcess />
-
-        {/* Interactive Custom Quote Estimator */}
-        <QuoteEstimator />
 
         {/* Verified Testimonials & FAQ */}
         <TestimonialsAndFaq />

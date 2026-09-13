@@ -24,7 +24,6 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenQuoteModal }) => {
     { name: 'Portfolio', href: '#portfolio' },
     { name: 'Materials & Craft', href: '#materials' },
     { name: 'How It Works', href: '#process' },
-    { name: 'Quote Calculator', href: '#calculator' },
     { name: 'Contact', href: '#contact' },
   ];
 
@@ -32,8 +31,8 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenQuoteModal }) => {
     <header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         isScrolled
-          ? 'bg-[#080808]/95 backdrop-blur-md border-b border-[#d4af37]/20 shadow-[0_4px_30px_rgba(0,0,0,0.8)] py-3'
-          : 'bg-gradient-to-b from-[#050505] via-[#050505]/80 to-transparent py-5'
+          ? 'bg-[#080808]/95 backdrop-blur-md border-b border-[#d4af37]/20 shadow-[0_4px_30px_rgba(0,0,0,0.8)] py-2.5'
+          : 'bg-gradient-to-b from-[#050505] via-[#050505]/80 to-transparent py-4'
       }`}
     >
       {/* Top micro-bar for Witbank Studio info (desktop only) */}
@@ -70,17 +69,13 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenQuoteModal }) => {
       </div>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 flex items-center justify-between">
-        {/* Brand Logo & Name */}
-        <a href="#" className="flex items-center space-x-3 group">
-          <DejaReveLogo size="sm" withGlow={false} />
-          <div className="flex flex-col">
-            <span className="text-xl sm:text-2xl font-bold tracking-wider text-gold-gradient group-hover:brightness-110 transition-all font-display">
-              Déjà Rêve
-            </span>
-            <span className="text-[9px] tracking-[0.25em] text-[#d4af37]/80 uppercase font-sans">
-              "Once a dream, now reality"
-            </span>
-          </div>
+        {/* Brand Logo - Enlarged without side text */}
+        <a href="#" className="flex items-center group py-0.5" aria-label="Déjà Rêve Home">
+          <DejaReveLogo
+            size="md"
+            className="w-16 h-16 sm:w-20 sm:h-20 group-hover:scale-105 transition-transform duration-300 drop-shadow-[0_0_20px_rgba(212,175,55,0.35)]"
+            withGlow={true}
+          />
         </a>
 
         {/* Desktop Nav Links */}

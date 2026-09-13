@@ -1,7 +1,7 @@
 import React from 'react';
 import { DejaReveLogo } from './DejaReveLogo';
 import { BUSINESS_INFO } from '../data/content';
-import { Sparkles, MessageCircle, ArrowRight, ShieldCheck, MapPin, Layers } from 'lucide-react';
+import { Sparkles, MessageCircle, ArrowRight } from 'lucide-react';
 
 interface HeroProps {
   onOpenQuoteModal: () => void;
@@ -42,30 +42,9 @@ export const Hero: React.FC<HeroProps> = ({ onOpenQuoteModal }) => {
       </div>
 
       <div className="max-w-5xl mx-auto text-center relative z-10 flex flex-col items-center">
-        {/* Top Badge: Studio Location & Excellence */}
-        <div className="inline-flex items-center space-x-2 px-4 py-1.5 rounded-full bg-[#161616] border border-[#d4af37]/30 mb-8 shadow-[0_4px_20px_rgba(0,0,0,0.5)]">
-          <span className="w-2 h-2 rounded-full bg-[#d4af37] animate-ping" />
-          <span className="text-xs uppercase tracking-[0.2em] text-[#f3e5ab] font-medium">
-            Witbank Studio &bull; South Africa
-          </span>
-          <span className="text-[#666]">&bull;</span>
-          <span className="text-xs text-[#a0a0a0] flex items-center space-x-1">
-            <MapPin className="w-3 h-3 text-[#d4af37]" />
-            <span>33 B Barlow Rd</span>
-          </span>
-        </div>
-
         {/* Central Brand Badge: Déjà Rêve */}
         <div className="mb-8 relative group">
           <DejaReveLogo size="xl" withGlow={true} animated={true} />
-          
-          {/* Subtle floating gold sparkle tags */}
-          <div className="hidden sm:block absolute -top-2 -right-8 bg-[#121212]/90 border border-[#d4af37]/40 px-3 py-1 rounded-full text-[11px] text-[#f3e5ab] shadow-lg animate-float-slow">
-            ✨ Laser Precision
-          </div>
-          <div className="hidden sm:block absolute -bottom-2 -left-8 bg-[#121212]/90 border border-[#d4af37]/40 px-3 py-1 rounded-full text-[11px] text-[#f3e5ab] shadow-lg animate-float-slow [animation-delay:2s]">
-            👑 Luxury Craftsmanship
-          </div>
         </div>
 
         {/* Hero Headline */}
@@ -84,7 +63,7 @@ export const Hero: React.FC<HeroProps> = ({ onOpenQuoteModal }) => {
         </p>
 
         {/* CTA Button Group */}
-        <div className="flex flex-col sm:flex-row items-center gap-4 w-full sm:w-auto mb-12 sm:mb-16">
+        <div className="flex flex-col sm:flex-row items-center gap-4 w-full sm:w-auto">
           <button
             onClick={onOpenQuoteModal}
             id="hero-request-quote-btn"
@@ -112,33 +91,6 @@ export const Hero: React.FC<HeroProps> = ({ onOpenQuoteModal }) => {
           >
             View Portfolio &darr;
           </a>
-        </div>
-
-        {/* Trust Badges & Highlights */}
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-4 sm:gap-6 w-full max-w-4xl border-t border-[#d4af37]/20 pt-8 sm:pt-10 text-left">
-          <div className="p-4 rounded-xl bg-[#111111]/80 border border-[#d4af37]/15">
-            <div className="text-[#d4af37] font-semibold text-lg sm:text-xl font-display">0.05 mm</div>
-            <div className="text-xs text-[#a0a0a0] uppercase tracking-wider mt-1">Laser Accuracy</div>
-            <p className="text-[11px] text-[#777] mt-1">Ultra-fine microscopic cuts on wood & acrylic</p>
-          </div>
-
-          <div className="p-4 rounded-xl bg-[#111111]/80 border border-[#d4af37]/15">
-            <div className="text-[#d4af37] font-semibold text-lg sm:text-xl font-display">Bespoke Only</div>
-            <div className="text-xs text-[#a0a0a0] uppercase tracking-wider mt-1">Custom Creations</div>
-            <p className="text-[11px] text-[#777] mt-1">Tailored for your weddings, parties & brand</p>
-          </div>
-
-          <div className="p-4 rounded-xl bg-[#111111]/80 border border-[#d4af37]/15">
-            <div className="text-[#d4af37] font-semibold text-lg sm:text-xl font-display">Barlow Road</div>
-            <div className="text-xs text-[#a0a0a0] uppercase tracking-wider mt-1">Witbank Studio</div>
-            <p className="text-[11px] text-[#777] mt-1">Visit our local workshop for custom proofs</p>
-          </div>
-
-          <div className="p-4 rounded-xl bg-[#111111]/80 border border-[#d4af37]/15">
-            <div className="text-[#d4af37] font-semibold text-lg sm:text-xl font-display">Nationwide</div>
-            <div className="text-xs text-[#a0a0a0] uppercase tracking-wider mt-1">Express Delivery</div>
-            <p className="text-[11px] text-[#777] mt-1">Door-to-door insured courier across SA</p>
-          </div>
         </div>
       </div>
     </section>
