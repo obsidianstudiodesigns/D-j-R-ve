@@ -1,0 +1,6 @@
+{
+  "name": "Déjà Rêve — Bespoke Laser Cutting & Luxury Designs",
+  "description": "High-end laser cutting, custom print, bespoke wedding stationery, luxury party boxes, and corporate design studio based in Witbank.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
