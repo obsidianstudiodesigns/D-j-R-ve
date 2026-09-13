@@ -9,15 +9,36 @@ interface HeroProps {
 
 export const Hero: React.FC<HeroProps> = ({ onOpenQuoteModal }) => {
   return (
-    <section className="relative min-h-[92vh] sm:min-h-screen flex items-center justify-center pt-28 pb-16 px-4 sm:px-6 overflow-hidden bg-gradient-to-b from-[#050505] via-[#090909] to-[#0d0d0d]">
+    <section className="relative min-h-screen w-full flex items-center justify-center pt-24 pb-16 px-4 sm:px-6 overflow-hidden bg-[#050505]">
+      {/* Full-Screen Edge-to-Edge Responsive Wallpaper */}
+      <div className="absolute inset-0 w-full h-full z-0 overflow-hidden pointer-events-none">
+        <picture className="w-full h-full block">
+          {/* Mobile Wallpaper: Landing page mobile.jpg (< 768px) */}
+          <source media="(max-width: 767px)" srcSet="./landing-page-mobile.jpg" />
+          {/* Desktop Wallpaper: landing page.jpg (>= 768px) */}
+          <source media="(min-width: 768px)" srcSet="./landing-page.jpg" />
+          {/* Fallback image */}
+          <img
+            src="./landing-page.jpg"
+            alt="Déjà Rêve Bespoke Luxury Wallpaper"
+            className="w-full h-full object-cover object-center"
+            referrerPolicy="no-referrer"
+          />
+        </picture>
+
+        {/* Sophisticated Luxury Scrim & Radial Vignette */}
+        <div className="absolute inset-0 bg-gradient-to-b from-[#050505]/75 via-[#050505]/45 to-[#0a0a0a]" />
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,transparent_15%,rgba(5,5,5,0.45)_65%,rgba(5,5,5,0.9)_100%)]" />
+      </div>
+
       {/* Ambient Starlight & Gold Glow Field */}
-      <div className="absolute inset-0 pointer-events-none overflow-hidden">
-        <div className="absolute -top-40 left-1/2 -translate-x-1/2 w-[700px] h-[500px] bg-gradient-to-b from-[#d4af37]/15 to-transparent rounded-full blur-3xl" />
-        <div className="absolute top-1/3 -left-32 w-96 h-96 bg-[#c59b27]/8 rounded-full blur-3xl" />
-        <div className="absolute bottom-10 -right-32 w-96 h-96 bg-[#aa771c]/10 rounded-full blur-3xl" />
+      <div className="absolute inset-0 pointer-events-none overflow-hidden z-[1]">
+        <div className="absolute -top-40 left-1/2 -translate-x-1/2 w-[700px] h-[500px] bg-gradient-to-b from-[#d4af37]/20 to-transparent rounded-full blur-3xl" />
+        <div className="absolute top-1/3 -left-32 w-96 h-96 bg-[#c59b27]/10 rounded-full blur-3xl" />
+        <div className="absolute bottom-10 -right-32 w-96 h-96 bg-[#aa771c]/15 rounded-full blur-3xl" />
         
         {/* Subtle grid pattern for precision feel */}
-        <div className="absolute inset-0 bg-[radial-gradient(#d4af37_0.75px,transparent_0.75px)] [background-size:32px_32px] opacity-[0.07]" />
+        <div className="absolute inset-0 bg-[radial-gradient(#d4af37_0.75px,transparent_0.75px)] [background-size:32px_32px] opacity-[0.06]" />
       </div>
 
       <div className="max-w-5xl mx-auto text-center relative z-10 flex flex-col items-center">
